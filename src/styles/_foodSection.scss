@@ -22,7 +22,7 @@ padding:
 //  226px 
 calc(226px - (1024px - 100vw) * 0.5)
  96px 
- calc(227px - (1024px - 100vw) * 0.5)
+ calc(225px - (1024px - 100vw) * 0.5)
 
 	}
 }
@@ -37,14 +37,37 @@ clamp(0px, 12.63vw, 97px);
 	}
 }
 
+@media (max-width: 480px) {
+	.menu-highlights-section{
+padding: 
+  72px 
+	calc(76.5px - (768px - 100vw) * 0.5 ) 
+	102px 
+	calc(76.5px - (768px - 100vw) * 0.5 );
+	}
+	}
+
+
+@media (max-width: 375px) {
+	.menu-highlights-section{
+padding: 
+  clamp(0px, 19.2vw, 72px)
+	clamp(0px, 6.4vw, 24px)
+	clamp(0px, 27.2vw, 102px)
+	clamp(0px, 6.4vw, 24px)
+	}
+	}
+
+
+
 
 .menu-highlights-container{
 	display: flex;
 	flex-direction: row;
 
-	border: 1px solid yellow;
+	// border: 3px solid yellow;
 
-	height: clamp(0px, 30.1vw, 441px);
+	height: clamp(0px, 30.6vw, 441px);
 }
 
 @media (max-width: 1024px) {
@@ -58,16 +81,38 @@ clamp(0px, 12.63vw, 97px);
 
 @media (max-width: 768px) {
 .menu-highlights-container{
-height: clamp(0px, 91vw, 699px);
+	height: clamp(0px, 91vw, 699px);
 }
 }
+
+@media (max-width: 480px) {
+.menu-highlights-container{
+	max-width: 327px;
+	margin: 0 auto;
+	height: 1546px;
+}
+}
+
+@media (max-width: 375px) {
+	.menu-highlights-container{
+
+	height: clamp(0px, 412.3vw, 1546px);
+}
+}
+
 
 .menu-highlights-main-info, .menu-highlighted-dishes-list{
   flex: 1;
-	border: 1px solid wheat;
+	// border: 1px solid wheat;
 }
 
 @media (max-width: 1024px) {
+	.menu-highlights-main-info {
+		flex: 1;
+	}}
+
+
+@media (max-width: 480px) {
 	.menu-highlights-main-info {
 		flex: 1;
 	}}
@@ -78,6 +123,15 @@ flex: 1.2;
 		}
 	}
 
+
+	@media (max-width: 480px) {
+		.menu-highlighted-dishes-list{
+flex: 4.17;
+		}
+	}
+
+
+	
 .menu-highlights-main-info-h2{
 width: clamp(0px, 31.25vw, 450px);
 }
@@ -98,6 +152,17 @@ width: clamp(0px, 58.59vw, 450px);
 }
 
 
+@media (max-width: 480px) {
+	.menu-highlights-main-info-h2{
+width: 300px;
+	}
+}
+
+@media (max-width: 375px) {
+	.menu-highlights-main-info-h2{
+width: clamp(0px, 80vw, 300px);
+	}
+}
 
 .menu-highlights-main-info-p{
 width: clamp(0px, 32vw, 460px);
@@ -112,12 +177,31 @@ width: clamp(0px, 32vw, 460px);
 	}
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 	.menu-highlights-main-info-p{
 
 		margin-top: clamp(0px, 3.52vw, 27px);
 		width: clamp(0px, 58.59vw, 450px);
 	}}
+
+
+@media (max-width: 480px) {
+	.menu-highlights-main-info-p{
+// font-size: 16px;
+		margin-top: 13px;
+		width: 327px;
+	}}
+
+
+@media (max-width: 375px) {
+	.menu-highlights-main-info-p{
+// font-size: 16px;
+		margin-top:clamp(0px, 3.47vw, 13px);
+		width: clamp(0px, 87.2vw, 327px);
+	}}
+
+
+
 
 
 .menu-highlighted-dishes-list{
@@ -130,7 +214,7 @@ width: clamp(0px, 32vw, 460px);
 	
 	justify-content: space-between;
 
-	border: 3px solid deeppink;
+	// border: 1px solid deeppink;
 	
 }
 
@@ -139,28 +223,35 @@ width: clamp(0px, 32vw, 460px);
 .menu-highlighted-dishes-list{
 padding-top: 0;
 	margin: 0;
-// height: 100%;
-		// flex-direction: row;
+
 }
 }
 
 
 .highlighted-dish{
 	display: flex;
-	border: 1px solid greenyellow;
+	// border: 1px solid greenyellow;
 
 	width: clamp(0px, 37.5vw, 540px);
 }
 
+
 @media (max-width: 1024px) {
 .highlighted-dish{
 	display: flex;
-	border: 1px solid greenyellow;
+	
 
 	width: 100%;
 }
 }
 
+
+@media (max-width: 480px) {
+.highlighted-dish{
+	display: flex;
+	flex-direction: column;
+}
+}
 
 
 
@@ -192,11 +283,23 @@ width: 32px;
 }
 
 
+@media (max-width: 480px) {
+.decorative-horizontal-line{
+display: none;
+}
+}
 
 .hightlighted-dish-pic-container {
 	display: flex;
 
 	// border: 3px solid red;
+}
+
+@media (max-width: 480px) {
+	.hightlighted-dish-pic-container {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 .hightlighted-dish-picture {
@@ -221,10 +324,26 @@ height: clamp(0px, 12.5vw, 96px);
 	}
 }
 
+@media (max-width: 480px) {
+	.hightlighted-dish-picture{
+width: 327px;
+height: 245px;
+	}
+}
+
+@media (max-width: 375px) {
+	.hightlighted-dish-picture{
+width: clamp(0px, 87.2vw, 327px);
+height: clamp(0px, 65.33vw, 245px);
+	}
+}
+
 
 
 .highlighted-dish-decription {
 margin-left: clamp(0px, 2.08vw, 30px);
+
+// border: 1px solid #ffffff;
 }
 
 
@@ -241,13 +360,27 @@ margin-left: clamp(0px, 3.91vw, 30px);
 }
 }
 
+@media (max-width: 480px) {
+.highlighted-dish-decription{
+	margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+}
+
 
 .highlighted-dish-description-h3{
+
+	// border: 1px solid darkturquoise;
 	margin: 0;
 	margin-top: clamp(0px, 0.56vw, 8px);
 	font-size: clamp(0px, 1.39vw, 20px);
 	line-height: clamp(0px, 1.67vw, 24px);
-	letter-spacing: clamp(-0.5px, calc(3.33vw * -0.0104), -0.25px);
+	// letter-spacing: clamp(-0.5px, calc(3.33vw * -0.0104), -0.25px);
+	letter-spacing: -0.25px;
 	font-weight: 700;
 }
 
@@ -268,7 +401,26 @@ margin-left: clamp(0px, 3.91vw, 30px);
 margin-top: clamp(0px, 1.04vw, 8px);
 font-size: clamp(0px, 2.6vw, 20px);
 line-height: clamp(0px, 3.13vw, 24px);
-letter-spacing: clamp(-0.5px, calc(7.68vw * -0.0326), -0.25px);
+// letter-spacing: clamp(-0.5px, -0.3vw, -0.25px);
+}
+}
+
+
+@media (max-width: 480px) {
+.highlighted-dish-description-h3{
+  margin-top: 36px;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.25px;
+}
+}
+
+@media (max-width: 375px) {
+.highlighted-dish-description-h3{
+ margin-top: clamp(0px, 9.6vw, 36px);
+font-size: clamp(0px, 5.33vw, 20px);
+line-height: clamp(0px, 6.4vw, 24px);
+letter-spacing: -0.25px;
 }
 }
 
@@ -298,10 +450,59 @@ margin-top: clamp(0px, 0.78vw, 6px);
 	}
 }
 
+
+@media (max-width: 480px) {
+	.highlighted-dish-description-p{
+font-size: 16px;
+line-height: 26px;
+margin-top: 6px;
+width: 265px;
+text-align: center;
+// border: 1px solid darkcyan;
+	}
+}
+
+
+@media (max-width: 375px) {
+	.highlighted-dish-description-p{
+font-size: clamp(0px, 4.27vw, 16px);
+line-height: clamp(0px, 6.93vw, 26px);
+margin-top: clamp(0px, 1.6vw, 6px);
+width: clamp(0px, 70.67vw, 265px);
+text-align: center;
+// border: 1px solid darkcyan;
+	}
+}
+
+@media (max-width: 480px) {
+.highlighted-dish-description-p-mobile-width{
+	width: 327px;
+}
+}
+
+@media (max-width: 375px) {
+.highlighted-dish-description-p-mobile-width{
+	width: clamp(0px, 87.2vw, 327px);
+}
+}
+
+
 .decorative-horizontal-line-long{
 width: 100%;
 margin: 0;
 background-color: #979797;
 border: 0;
 height: 0.5px;
+}
+
+
+.mobile-br {
+  display: none;
+}
+
+
+@media (max-width: 480px) {
+  .mobile-br {
+    display: inline;
+  }
 }

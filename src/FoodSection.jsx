@@ -21,7 +21,9 @@ export const FoodSection = () => {
           </p>
         </div>
 
-        <div className="menu-highlighted-dishes-list">
+				<div className="menu-highlighted-dishes-list">
+					
+
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
               <picture>
@@ -48,17 +50,20 @@ export const FoodSection = () => {
             </div>
 
             <div className="highlighted-dish-decription">
+
               <h3 className="highlighted-dish-description-h3">
                 Seared Salmon Fillet
               </h3>
 
-              <p className="highlighted-dish-description-p">
-                Our locally sourced salmon served with a refreshing buckwheat
+              <p className="highlighted-dish-description-p highlighted-dish-description-p-mobile-width">
+                Our locally sourced salmon served<br className="mobile-br"/> with a refreshing buckwheat
                 summer salad.
               </p>
             </div>
-          </div>
-          <hr className="decorative-horizontal-line-long" />
+					</div>
+					
+					<hr className="decorative-horizontal-line-long" />
+					
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
               <picture>
@@ -96,6 +101,8 @@ export const FoodSection = () => {
             </div>
           </div>
           <hr className="decorative-horizontal-line-long" />
+
+
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
               <picture>
@@ -126,12 +133,14 @@ export const FoodSection = () => {
                 Summer Fruit Chocolate Mousse
               </h3>
 
-              <p className="highlighted-dish-description-p">
-                Creamy mousse combined with summer fruits and dark chocolate
+              <p className="highlighted-dish-description-p highlighted-dish-description-p-mobile-width">
+                Creamy mousse combined with<br className="mobile-br"/> summer fruits and dark chocolate
                 shavings.
               </p>
             </div>
-          </div>
+					</div>
+					
+
         </div>
       </div>
     </section>

@@ -279,7 +279,7 @@
   // letter-spacing: clamp(-0.5px, -0.03vw, 0px);
   // letter-spacing: -1px;
 
-  letter-spacing: clamp(-0.5px, calc(3.33vw * -0.0104), -0.25px);
+  letter-spacing:  -0.25px;
 }
 
 @media (max-width: 1024px) {
@@ -306,7 +306,7 @@
 
     // margin-top: clamp(0px, 4.69vw, 36px);
     margin-top: clamp(20px, 5.08vw, 39px);
-    letter-spacing: clamp(-0.5px, calc(6.25vw * -0.0104), -0.25px);
+    letter-spacing: -0.25px;
   }
 }
 
@@ -328,7 +328,7 @@
     line-height: clamp(0px, 10.66vw, 40px);
     width: clamp(0px, 66.66vw, 250px);
     margin-top: clamp(0px, 9.6vw, 36px);
-    letter-spacing: clamp(-1px, -0.106vw, -0.4px);
+    letter-spacing:  -0.4px;
   }
 }
 
@@ -337,7 +337,9 @@
   font-style: normal;
   font-weight: 400;
   margin: 0;
+
   // border: 1px solid firebrick;
+
   margin-top: clamp(0px, 1.875vw, 27px);
   font-size: clamp(0px, 1.39vw, 20px);
 
