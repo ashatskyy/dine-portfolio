@@ -34,7 +34,8 @@ const Home = () => {
         <Link to="/">Family Gathering</Link> |
         <Link to="/special-events">Special Events</Link> |
         <Link to="/social-events">Social Events</Link>
-      </nav>
+			</nav>
+			
       <p>PIC</p>
       <p>are you not booking alredy? :</p>
       <LinkToBooking />
