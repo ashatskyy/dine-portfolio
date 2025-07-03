@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-// import { LinkToBooking } from "./LinkToBooking";
+import { LinkToBooking } from "./LinkToBooking";
 
-export const Header = ({ LinkToBooking }) => {
+// export const Header = ({ LinkToBooking }) => {
+export const Header = () => {
   // export const Header = () => {
   return (
 		// <header className="header-container">
@@ -25,7 +26,8 @@ export const Header = ({ LinkToBooking }) => {
             Experience our seasonal menu in beautiful country surroundings. Eat
             the freshest produce from the comfort of our farmhouse.
           </p>
-          {LinkToBooking && <LinkToBooking />} 
+          {/* {LinkToBooking && <LinkToBooking />}  */}
+          {<LinkToBooking transparentBackground={true}/>} 
 				</div>  
 				
       </div>

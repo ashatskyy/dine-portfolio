@@ -1,4 +1,4 @@
-export const FoodSection = () => {
+export const FoodInfoSection = () => {
   return (
 		<section className="menu-highlights-section">
 			
@@ -56,7 +56,7 @@ export const FoodSection = () => {
               </h3>
 
               <p className="highlighted-dish-description-p highlighted-dish-description-p-mobile-width">
-                Our locally sourced salmon served<br className="mobile-br"/> with a refreshing buckwheat
+                Our locally sourced salmon served<br className="desctop-mobile-br"/> with a refreshing buckwheat
                 summer salad.
               </p>
             </div>

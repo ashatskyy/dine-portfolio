@@ -94,12 +94,30 @@
   }
 }
 
+// @media (max-width: 768px) {
+//   .topBackground,
+//   .bottomBackground {
+//     height: clamp(0px, 41.66vw, 320px);
+//   }
+// }
 @media (max-width: 768px) {
   .topBackground,
   .bottomBackground {
     height: clamp(0px, 41.66vw, 320px);
   }
 }
+
+@media (max-width: 768px) {
+ 
+  .bottomBackground {
+    background-image: url("/images/pattern-curve-top-left-short-768px.svg");
+		// background: none;
+		// background-size: 384px 320px;
+		background-size: clamp(0px, 50vw, 384px) clamp(0px, 41.7vw, 320px);
+  }
+}
+
+
 @media (max-width: 768px) {
   .topBackground {
     margin-top: clamp(0px, 13.02vw, 100px);
@@ -306,7 +324,7 @@
 
     // margin-top: clamp(0px, 4.69vw, 36px);
     margin-top: clamp(20px, 5.08vw, 39px);
-    letter-spacing: -0.25px;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -540,8 +558,8 @@ left:clamp(0px,6.4vw,24px );
 @media (max-width: 768px) {
   .restaurant-most-locly-food-picture-container {
 
-width: clamp(286px, 74.6vw, 573px);
-height: clamp(180px, 46.88vw, 360px);
+width: clamp(0px, 74.6vw, 573px);
+height: clamp(0px, 46.88vw, 360px);
 bottom: clamp(0px, 57.68vw, 443px);
 left: clamp(0px, 12.63vw, 97px);
 	}
@@ -617,7 +635,7 @@ left: clamp(0px,6.4vw,24px );
     height: clamp(0px,9.89vw,76px);
 
 		right: clamp(0px,5.2vw,40px);
- bottom: clamp(0px,63.37vw,489px);
+ bottom: clamp(0px,63.67vw,489px);
 	}
 
 }

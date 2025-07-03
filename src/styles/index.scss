@@ -1,6 +1,8 @@
 @use './header';
 @use './aboutInfoSection';
-@use './foodSection';
+@use './foodInfoSection';
+@use './eventsInfoSection';
+@use './callToActionSection';
 
 
 @font-face {
@@ -45,7 +47,8 @@
 
 
 
-
+.tast-p{margin: 0;
+padding: 0;}
 
 
 * {

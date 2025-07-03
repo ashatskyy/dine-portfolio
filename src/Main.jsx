@@ -1,11 +1,15 @@
 import { AboutInfoSection } from "./AboutInfoSection";
-import { FoodSection } from "./FoodSection";
+import { FoodInfoSection } from "./FoodInfoSection";
+import { EventsInfoSection } from "./EventsInfoSection";
+import { CallToActionSection } from "./CallToActionSection";
 
 export const Main = () => {
   return (
     <>
-  <AboutInfoSection />
-  <FoodSection />
+      <AboutInfoSection />
+      <FoodInfoSection />
+			<EventsInfoSection />
+			<CallToActionSection/>
     </>
   );
 };

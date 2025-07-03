@@ -331,6 +331,12 @@ letter-spacing: clamp(-100px, -0.069vw, -1px);
   cursor: default;
 }
 
+.book-a-table-button-opaque-background{
+
+	background-color: #111111;
+	border: 1px solid #111111;
+}
+
 @media (max-width: 1024px) {
   .book-a-table-button {
 
@@ -393,7 +399,10 @@ line-height: clamp(0px, 4.27vw, 16px);
 .book-a-table-button:active {
   color: #111111;
   background-color: #ffffff;
+
 }
+
+
 
 @media (min-width: 1024px) {
   .book-a-table-button {
