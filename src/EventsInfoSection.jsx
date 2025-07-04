@@ -6,7 +6,8 @@ export const EventsInfoSection = () => {
   const [activeSection, setActiveSection] = useState("Family Gathering");
 
   return (
-    <section className="events-section">
+		<section className="events-section">
+			<img className="pattern-lines pattern-lines-events-section" src="./images/pattern-lines.svg" alt="pattern lines" />
       {activeSection === "Family Gathering" && (
         <FamilyGathering setActiveSection={setActiveSection} />
       )}
@@ -24,11 +25,7 @@ function FamilyGathering({ setActiveSection }) {
   return (
     <div className="events-info-container">
       <div className="events-picture-container">
-        {/* <img
-          className="event-picture"
-          src="./images/family-gathering-desktop.jpg"
-          alt=""
-				/> */}
+  
 
         <picture>
           <source
@@ -59,14 +56,14 @@ function FamilyGathering({ setActiveSection }) {
         <hr className="decorative-horizontal-line decorative-horizontal-line-for-events-section-famaly" />
       </div>
 
-      <div className="events-info-text-bocking-nav-container">
-        <div className="events-info-text-bocking-container-part">
+      <div className="events-info-text-booking-nav-container">
+        <div className="events-info-text-booking-container-part">
           <h2 className="about-info-section-txt-block-h2 events-section-h2 ">
             Family Gathering
           </h2>
           <p className="about-info-section-txt-block-p events-section-p">
             We love catering for entire families. So please bring everyone along
-            for a special meal with your loved ones. We’ll provide a memorable
+            for a special meal with your loved ones. We’ll provide a memorable<br className="event-mobile-br"/>
             experience for all.
           </p>
 
@@ -113,12 +110,12 @@ function SpecialEvents({ setActiveSection }) {
         <hr className="decorative-horizontal-line decorative-horizontal-line-for-events-section-special" />
       </div>
 
-      <div className="events-info-text-bocking-nav-container">
-        <div className="events-info-text-bocking-container-part">
+      <div className="events-info-text-booking-nav-container">
+        <div className="events-info-text-booking-container-part">
           <h2 className="about-info-section-txt-block-h2 events-section-h2 ">
             Special Events
           </h2>
-          <p className="about-info-section-txt-block-p events-section-p events-section-p-small-buttom-margin">
+          <p className="about-info-section-txt-block-p events-section-p events-section-p-small-buttom-margin-one">
             Whether it’s a romantic dinner or special date you’re celebrating
             with others we’ll look after you. We’ll be sure to mark your special
             date with an unforgettable meal.
@@ -168,13 +165,13 @@ function SocialEvents({ setActiveSection }) {
         <hr className="decorative-horizontal-line decorative-horizontal-line-for-events-section-social" />
       </div>
 
-      <div className="events-info-text-bocking-nav-container">
-        <div className="events-info-text-bocking-container-part">
+      <div className="events-info-text-booking-nav-container">
+        <div className="events-info-text-booking-container-part">
           <h2 className="about-info-section-txt-block-h2 events-section-h2 ">
             Social Events
           </h2>
-          <p className="about-info-section-txt-block-p events-section-p events-section-p-small-buttom-margin">
-            Are you looking to have a larger social event? No problem! We’re
+          <p className="about-info-section-txt-block-p events-section-p events-section-p-small-buttom-margin-two">
+            Are you looking to have a larger social event? <br className="event-mobile-br"/>No problem! We’re
             more than happy to cater for big parties. We’ll work with you to
             make your event a hit with everyone.
           </p>
