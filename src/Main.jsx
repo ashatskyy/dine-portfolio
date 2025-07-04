@@ -1,7 +1,8 @@
 import { AboutInfoSection } from "./AboutInfoSection";
 import { FoodInfoSection } from "./FoodInfoSection";
 import { EventsInfoSection } from "./EventsInfoSection";
-import { CallToActionSection } from "./CallToActionSection";
+
+import { ReservationSection } from "./ReservationSection";
 
 export const Main = () => {
   return (
@@ -9,7 +10,7 @@ export const Main = () => {
       <AboutInfoSection />
       <FoodInfoSection />
 			<EventsInfoSection />
-			<CallToActionSection/>
+			<ReservationSection />
     </>
   );
 };
