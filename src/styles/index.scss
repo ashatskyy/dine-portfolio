@@ -3,7 +3,9 @@
 @use './foodInfoSection';
 @use './eventsInfoSection';
 @use './reservationSection';
+@use './bookingPage';
 @use './footer';
+@use './form';
 
 
 @font-face {
@@ -34,6 +36,14 @@
   src: url('/fonts/league-spartan-v14-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* league-spartan-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/league-spartan-v14-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 
 /* league-spartan-700 - latin */
