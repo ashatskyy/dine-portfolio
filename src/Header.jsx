@@ -15,9 +15,11 @@ export const Header = () => {
 
 			<div className="header-logo-info-block">
 				
-        <Link to="/" className="logo-link">
-          <img className="logo" src="./images/dine.svg" alt="logo" />
-        </Link>
+					{/* <Link to="/" className="logo-link"> */}
+					<div className="logo-link">
+					<img className="logo" src="./images/dine.svg" alt="logo" />
+					</div>
+        {/* </Link> */}
         <div className="header-info">
           <h1 className="header-main-info-about-restaurant-home-pg-h1">
             Exquisite dining since 1989

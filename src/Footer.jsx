@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+	const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
   return (
     <section className="footer">
       <div className="footer-main-container">
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={scrollToTop}>
           <img className="logo" src="./images/dine.svg" alt="logo" />
 				</Link>
 				

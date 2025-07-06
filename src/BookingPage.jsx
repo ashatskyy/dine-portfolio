@@ -16,10 +16,15 @@ export const BookingPage = () => {
 };
 
 const BookingPageHeader = () => {
+
+	const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+	};
+	
   return (
 		<header className="booking-header-container">
 			<Form />
-      <Link to="/" className="logo-link">
+      <Link to="/" className="logo-link" onClick={scrollToTop}>
 				<img className="logo" src="./images/dine.svg" alt="logo" />
 				  </Link>
         <div className="booking-header-text-block">

@@ -2,8 +2,6 @@ import isEmail from "validator/lib/isEmail";
 
 import { useEffect, useState, useCallback } from "react";
 
-
-
 export function Form() {
   const [form, setForm] = useState({
     name: "",
@@ -15,13 +13,14 @@ export function Form() {
     minutes: "",
   });
 
-  const [errorFormName, setErrorFormName] = useState("");
-  const [errorFormEmail, setErrorFormEmail] = useState("");
+  // useEffect(() => { console.log(form);}, [form])
+
+  const [mainCondition, setMainCondition] = useState(true);
+
+  // const [errorFormName, setErrorFormName] = useState("");
+  // const [errorFormEmail, setErrorFormEmail] = useState("");
 
   const [errorFormDay, setErrorFormDay] = useState(true);
-
-  const [dataFildsetInfo, setDataFildsetInfo] = useState("Pick a date");
-  const [timeFildsetInfo, setTimeFildsetInfo] = useState("Pick a time");
 
   const [errorFormMonth, setErrorFormMonth] = useState(true);
   const [errorFormYear, setErrorFormYear] = useState(true);
@@ -29,8 +28,21 @@ export function Form() {
   const [errorFormMinutes, setErrorFormMinutes] = useState(true);
 
   const [errorFormDate, setErrorFormDate] = useState(true);
-
   const [errorFormTime, setErrorFormTime] = useState(true);
+
+  const [errorFormName, setErrorFormName] = useState("lorem");
+  const [errorFormEmail, setErrorFormEmail] = useState("lorem");
+
+  // const [errorFormDay, setErrorFormDay] = useState(false);
+  // const [errorFormMonth, setErrorFormMonth] = useState(false);
+  // const [errorFormYear, setErrorFormYear] = useState(false);
+  // const [errorFormHours, setErrorFormHours] = useState(false);
+  // const [errorFormMinutes, setErrorFormMinutes] = useState(false);
+  // const [errorFormDate, setErrorFormDate] = useState(false);
+  // const [errorFormTime, setErrorFormTime] = useState(false);
+
+  const [dataFildsetInfo, setDataFildsetInfo] = useState("Pick a date");
+  const [timeFildsetInfo, setTimeFildsetInfo] = useState("Pick a time");
 
   const [secondTimePlus, setSecondTimePlus] = useState(false);
 
@@ -209,7 +221,36 @@ export function Form() {
 
     setSecondTimePlus(true);
     setValidationTimes((p) => p + 1);
+
+    if (
+      !errorFormDay &&
+      !errorFormMonth &&
+      !errorFormYear &&
+      !errorFormHours &&
+      !errorFormMinutes &&
+      !errorFormDate &&
+      !errorFormTime &&
+      !errorFormName &&
+      !errorFormEmail
+    ) {
+			setMainCondition(false);
+			// window.scrollTo(0, 0);
+			  window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
+
+  // const [errorFormDay, setErrorFormDay] = useState(true);
+
+  // const [errorFormMonth, setErrorFormMonth] = useState(true);
+  // const [errorFormYear, setErrorFormYear] = useState(true);
+  // const [errorFormHours, setErrorFormHours] = useState(true);
+  // const [errorFormMinutes, setErrorFormMinutes] = useState(true);
+
+  // const [errorFormDate, setErrorFormDate] = useState(true);
+  // const [errorFormTime, setErrorFormTime] = useState(true);
+
+  // const [errorFormName, setErrorFormName] = useState("lorem");
+  // const [errorFormEmail, setErrorFormEmail] = useState("lorem");
 
   const checkDateExistence = (year, month, day) => {
     const bidDate = `${year}-${month}-${day}`;
@@ -389,403 +430,426 @@ export function Form() {
   }
 
   return (
-    <form
-		
-			className={`form ${
-              secondTimePlus && errorFormEmail
-                ? "form-long-height"
-                : ""
-            }`}
-      onSubmit={handleSubmit}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-        }
-      }}
-      noValidate
-    >
-      {/* <fieldset className="fildset-name-email"> */}
-			<fieldset className={`fildset-name-email ${
+    <>
+      {mainCondition ? (
+        <form
+          className={`form ${
+            secondTimePlus && errorFormEmail ? "form-long-height" : ""
+          }`}
+          onSubmit={handleSubmit}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+            }
+          }}
+          noValidate
+        >
+          {/* <fieldset className="fildset-name-email"> */}
+          <fieldset
+            className={`fildset-name-email ${
               secondTimePlus && errorFormEmail
                 ? "fildset-name-email-long-margin-bottom"
                 : ""
-            }`}>
-        <legend className="visually-hidden">Contact Information</legend>
-
-        <label htmlFor="name" className="visually-hidden">
-          Name
-        </label>
-
-        <div className="input-set">
-          <input
-            autocomplete="off"
-            id="name"
-            className={`input ${
-              secondTimePlus && errorFormName
-                ? "placeholder-error border-input-error"
-                : "placeholder-normal"
             }`}
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                e.target.blur();
-              }
-            }}
-          />
-          <div className="error_mesage_div">
-            {secondTimePlus && errorFormName && (
-              <p className="errorText">{errorFormName}</p>
-            )}
-          </div>
-        </div>
-        <label htmlFor="email" className="visually-hidden">
-          Email
-        </label>
-        <div className="input-set">
-          <input
-            autocomplete="off"
-            id="email"
-            className={`input ${
-              secondTimePlus && errorFormEmail
-                ? "placeholder-error border-input-error wrong-input-txt-color"
-                : "placeholder-normal"
-            }`}
-            type="text"
-            name="email"
-            placeholder="Email"
-            value={form.email}
-            onChange={handleChange}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                e.target.blur();
-              }
-            }}
-          />
-          <div className="error_mesage_div">
-            {secondTimePlus && errorFormEmail && (
-              <p className="errorText">{errorFormEmail}</p>
-            )}
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset className="fildset-date">
-        <legend className="visually-hidden">Date set fieldset</legend>
-
-        <div
-          className={`action-of-the-field-info ${
-            (secondTimePlus &&
-              (errorFormMonth || errorFormDay || errorFormYear)) ||
-            (secondTimePlus && errorFormDate)
-              ? "wrong-input-txt-color "
-              : ""
-          }`}
-        >
-          {dataFildsetInfo}
-
-          {(secondTimePlus &&
-            (errorFormMonth || errorFormDay || errorFormYear) && (
-              <p className=" errorText-data">This fild is incomplite</p>
-            )) ||
-            (secondTimePlus && errorFormDate && (
-              <p className="errorText-data">This fild is incorrect</p>
-            ))}
-        </div>
-
-        <div class="data-time-fields-set">
-          <label htmlFor="day" className="visually-hidden">
-            Day
-          </label>
-
-          <input
-            autocomplete="off"
-            name="day"
-            type="text"
-            inputMode="numeric"
-            placeholder="DD"
-            maxLength={2}
-            className={`input input-day-month-hours-minutes ${
-              (secondTimePlus &&
-                (errorFormMonth || errorFormDay || errorFormYear)) ||
-              (secondTimePlus && errorFormDate)
-                ? "placeholder-error border-input-error wrong-input-txt-color"
-                : "placeholder-normal"
-            }`}
-            onInput={(e) => {
-              let val = e.target.value.replace(/\D/g, "").slice(0, 2);
-
-              if (val.length === 2 && (Number(val) < 1 || Number(val) > 31)) {
-                val = val.slice(0, 1);
-              }
-              e.target.value = val;
-            }}
-            onBlur={handleBlur}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                handleBlur(e);
-                e.target.blur();
-              }
-            }}
-            value={form.day}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="month" className="visually-hidden">
-            Month
-          </label>
-
-          <input
-            autocomplete="off"
-            type="text"
-            inputMode="numeric"
-            placeholder="MM"
-            className={`input input-day-month-hours-minutes ${
-              (secondTimePlus &&
-                (errorFormMonth || errorFormDay || errorFormYear)) ||
-              (secondTimePlus && errorFormDate)
-                ? "placeholder-error border-input-error wrong-input-txt-color"
-                : "placeholder-normal"
-            }`}
-            maxLength={2}
-            name="month"
-            onInput={(e) => {
-              let val = e.target.value.replace(/\D/g, "").slice(0, 2);
-
-              if (val.length === 2 && (Number(val) < 1 || Number(val) > 12)) {
-                val = val.slice(0, 1);
-              }
-              e.target.value = val;
-            }}
-            onBlur={handleBlur}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                handleBlur(e); //
-                e.target.blur();
-              }
-            }}
-            value={form.month}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="year" className="visually-hidden">
-            Year
-          </label>
-
-          <input
-            autocomplete="off"
-            name="year"
-            type="text"
-            inputMode="numeric"
-            placeholder="YYYY"
-            className={`input input-year-pseudo-input-meridiem ${
-              (secondTimePlus &&
-                (errorFormMonth || errorFormDay || errorFormYear)) ||
-              (secondTimePlus && errorFormDate)
-                ? "placeholder-error border-input-error wrong-input-txt-color"
-                : "placeholder-normal"
-            }`}
-            maxLength={4}
-            onInput={(e) => {
-              let val = e.target.value.replace(/\D/g, "").slice(0, 4);
-
-              e.target.value = val;
-            }}
-            onBlur={handleYearBlur}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                handleYearBlur(e);
-                e.target.blur();
-              }
-            }}
-            value={form.year}
-            onChange={handleChange}
-          />
-        </div>
-      </fieldset>
-
-      <fieldset className="fildset-time">
-        <legend className="visually-hidden">Time set fieldset</legend>
-
-        <div
-          class={`action-of-the-field-info ${
-            (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
-            (secondTimePlus &&
-              errorFormTime &&
-              !errorFormDate &&
-              !(errorFormMonth || errorFormDay || errorFormYear))
-              ? "wrong-input-txt-color"
-              : ""
-          }`}
-        >
-          {timeFildsetInfo}
-
-          {(secondTimePlus && (errorFormHours || errorFormMinutes) && (
-            <p className="errorText-data">This fild is incomplite</p>
-          )) ||
-            (secondTimePlus &&
-              errorFormTime &&
-              !errorFormDate &&
-              !(errorFormMonth || errorFormDay || errorFormYear) && (
-                <p className="errorText-data">This fild is incorrect</p>
-              ))}
-        </div>
-
-        <div class="data-time-fields-set">
-          <label htmlFor="hours" className="visually-hidden">
-            Hours
-          </label>
-
-          <input
-            autocomplete="off"
-            className={`input input-day-month-hours-minutes
-							${
-                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
-                (secondTimePlus &&
-                  errorFormTime &&
-                  !errorFormDate &&
-                  !(errorFormMonth || errorFormDay || errorFormYear))
-                  ? "placeholder-error border-input-error wrong-input-txt-color"
-                  : "placeholder-normal"
-              }
-							
-							`}
-            name="hours"
-            type="text"
-            inputMode="numeric"
-            placeholder="09"
-            maxLength={2}
-            onInput={(e) => {
-              let val = e.target.value.replace(/\D/g, "").slice(0, 2);
-
-              if (val.length === 2 && (Number(val) < 1 || Number(val) > 12)) {
-                val = val.slice(0, 1);
-              }
-              e.target.value = val;
-            }}
-            onBlur={handleBlur}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                handleBlur(e);
-                e.target.blur();
-              }
-            }}
-            value={form.hours}
-            onChange={handleChange}
-          />
-
-          <label htmlFor="minuts" className="visually-hidden">
-            Minutes
-          </label>
-
-          <input
-            autocomplete="off"
-            className={`input input-day-month-hours-minutes
-							${
-                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
-                (secondTimePlus &&
-                  errorFormTime &&
-                  !errorFormDate &&
-                  !(errorFormMonth || errorFormDay || errorFormYear))
-                  ? "placeholder-error border-input-error wrong-input-txt-color"
-                  : "placeholder-normal"
-              }
-							
-							`}
-            name="minutes"
-            type="text"
-            inputMode="numeric"
-            placeholder="00"
-            maxLength={2}
-            onInput={(e) => {
-              let val = e.target.value.replace(/\D/g, "").slice(0, 2);
-
-              if (val.length === 2 && (Number(val) < 0 || Number(val) > 59)) {
-                val = val.slice(0, 1);
-              }
-              e.target.value = val;
-            }}
-            onBlur={handleMinutesBlur}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-
-                handleMinutesBlur(e);
-                e.target.blur();
-              }
-            }}
-            value={form.minutes}
-            onChange={handleChange}
-          />
-
-          <div
-            className={`half-of-day-indecator input-year-pseudo-input-meridiem pseudo-input
-							${
-                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
-                (secondTimePlus &&
-                  errorFormTime &&
-                  !errorFormDate &&
-                  !(errorFormMonth || errorFormDay || errorFormYear))
-                  ? "placeholder-error border-input-error wrong-input-txt-color"
-                  : "placeholder-normal"
-              }
-							
-							`}
           >
-            {halfOfDay}
-          </div>
+            <legend className="visually-hidden">Contact Information</legend>
+
+            <label htmlFor="name" className="visually-hidden">
+              Name
+            </label>
+
+            <div className="input-set">
+              <input
+                autoComplete="off"
+                id="name"
+                className={`input ${
+                  secondTimePlus && errorFormName
+                    ? "placeholder-error border-input-error"
+                    : "placeholder-normal"
+                }`}
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    e.target.blur();
+                  }
+                }}
+              />
+              <div className="error_mesage_div">
+                {secondTimePlus && errorFormName && (
+                  <p className="errorText">{errorFormName}</p>
+                )}
+              </div>
+            </div>
+            <label htmlFor="email" className="visually-hidden">
+              Email
+            </label>
+            <div className="input-set">
+              <input
+                autoComplete="off"
+                id="email"
+                className={`input ${
+                  secondTimePlus && errorFormEmail
+                    ? "placeholder-error border-input-error wrong-input-txt-color"
+                    : "placeholder-normal"
+                }`}
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    e.target.blur();
+                  }
+                }}
+              />
+              <div className="error_mesage_div">
+                {secondTimePlus && errorFormEmail && (
+                  <p className="errorText">{errorFormEmail}</p>
+                )}
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset className="fildset-date">
+            <legend className="visually-hidden">Date set fieldset</legend>
+
+            <div
+              className={`action-of-the-field-info ${
+                (secondTimePlus &&
+                  (errorFormMonth || errorFormDay || errorFormYear)) ||
+                (secondTimePlus && errorFormDate)
+                  ? "wrong-input-txt-color "
+                  : ""
+              }`}
+            >
+              {dataFildsetInfo}
+
+              {(secondTimePlus &&
+                (errorFormMonth || errorFormDay || errorFormYear) && (
+                  <p className=" errorText-data">This fild is incomplite</p>
+                )) ||
+                (secondTimePlus && errorFormDate && (
+                  <p className="errorText-data">This fild is incorrect</p>
+                ))}
+            </div>
+
+            <div className="data-time-fields-set">
+              <label htmlFor="day" className="visually-hidden">
+                Day
+              </label>
+
+              <input
+                autoComplete="off"
+                name="day"
+                type="text"
+                inputMode="numeric"
+                placeholder="DD"
+                maxLength={2}
+                className={`input input-day-month-hours-minutes ${
+                  (secondTimePlus &&
+                    (errorFormMonth || errorFormDay || errorFormYear)) ||
+                  (secondTimePlus && errorFormDate)
+                    ? "placeholder-error border-input-error wrong-input-txt-color"
+                    : "placeholder-normal"
+                }`}
+                onInput={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").slice(0, 2);
+
+                  if (
+                    val.length === 2 &&
+                    (Number(val) < 1 || Number(val) > 31)
+                  ) {
+                    val = val.slice(0, 1);
+                  }
+                  e.target.value = val;
+                }}
+                onBlur={handleBlur}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleBlur(e);
+                    e.target.blur();
+                  }
+                }}
+                value={form.day}
+                onChange={handleChange}
+              />
+
+              <label htmlFor="month" className="visually-hidden">
+                Month
+              </label>
+
+              <input
+                autoComplete="off"
+                type="text"
+                inputMode="numeric"
+                placeholder="MM"
+                className={`input input-day-month-hours-minutes ${
+                  (secondTimePlus &&
+                    (errorFormMonth || errorFormDay || errorFormYear)) ||
+                  (secondTimePlus && errorFormDate)
+                    ? "placeholder-error border-input-error wrong-input-txt-color"
+                    : "placeholder-normal"
+                }`}
+                maxLength={2}
+                name="month"
+                onInput={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").slice(0, 2);
+
+                  if (
+                    val.length === 2 &&
+                    (Number(val) < 1 || Number(val) > 12)
+                  ) {
+                    val = val.slice(0, 1);
+                  }
+                  e.target.value = val;
+                }}
+                onBlur={handleBlur}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleBlur(e); //
+                    e.target.blur();
+                  }
+                }}
+                value={form.month}
+                onChange={handleChange}
+              />
+
+              <label htmlFor="year" className="visually-hidden">
+                Year
+              </label>
+
+              <input
+                autoComplete="off"
+                name="year"
+                type="text"
+                inputMode="numeric"
+                placeholder="YYYY"
+                className={`input input-year-pseudo-input-meridiem ${
+                  (secondTimePlus &&
+                    (errorFormMonth || errorFormDay || errorFormYear)) ||
+                  (secondTimePlus && errorFormDate)
+                    ? "placeholder-error border-input-error wrong-input-txt-color"
+                    : "placeholder-normal"
+                }`}
+                maxLength={4}
+                onInput={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").slice(0, 4);
+
+                  e.target.value = val;
+                }}
+                onBlur={handleYearBlur}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleYearBlur(e);
+                    e.target.blur();
+                  }
+                }}
+                value={form.year}
+                onChange={handleChange}
+              />
+            </div>
+          </fieldset>
+
+          <fieldset className="fildset-time">
+            <legend className="visually-hidden">Time set fieldset</legend>
+
+            <div
+              className={`action-of-the-field-info ${
+                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
+                (secondTimePlus &&
+                  errorFormTime &&
+                  !errorFormDate &&
+                  !(errorFormMonth || errorFormDay || errorFormYear))
+                  ? "wrong-input-txt-color"
+                  : ""
+              }`}
+            >
+              {timeFildsetInfo}
+
+              {(secondTimePlus && (errorFormHours || errorFormMinutes) && (
+                <p className="errorText-data">This fild is incomplite</p>
+              )) ||
+                (secondTimePlus &&
+                  errorFormTime &&
+                  !errorFormDate &&
+                  !(errorFormMonth || errorFormDay || errorFormYear) && (
+                    <p className="errorText-data">This fild is incorrect</p>
+                  ))}
+            </div>
+
+            <div className="data-time-fields-set">
+              <label htmlFor="hours" className="visually-hidden">
+                Hours
+              </label>
+
+              <input
+                autoComplete="off"
+                className={`input input-day-month-hours-minutes
+							${
+                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
+                (secondTimePlus &&
+                  errorFormTime &&
+                  !errorFormDate &&
+                  !(errorFormMonth || errorFormDay || errorFormYear))
+                  ? "placeholder-error border-input-error wrong-input-txt-color"
+                  : "placeholder-normal"
+              }
+							
+							`}
+                name="hours"
+                type="text"
+                inputMode="numeric"
+                placeholder="09"
+                maxLength={2}
+                onInput={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").slice(0, 2);
+
+                  if (
+                    val.length === 2 &&
+                    (Number(val) < 1 || Number(val) > 12)
+                  ) {
+                    val = val.slice(0, 1);
+                  }
+                  e.target.value = val;
+                }}
+                onBlur={handleBlur}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleBlur(e);
+                    e.target.blur();
+                  }
+                }}
+                value={form.hours}
+                onChange={handleChange}
+              />
+
+              <label htmlFor="minuts" className="visually-hidden">
+                Minutes
+              </label>
+
+              <input
+                autoComplete="off"
+                className={`input input-day-month-hours-minutes
+							${
+                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
+                (secondTimePlus &&
+                  errorFormTime &&
+                  !errorFormDate &&
+                  !(errorFormMonth || errorFormDay || errorFormYear))
+                  ? "placeholder-error border-input-error wrong-input-txt-color"
+                  : "placeholder-normal"
+              }
+							
+							`}
+                name="minutes"
+                type="text"
+                inputMode="numeric"
+                placeholder="00"
+                maxLength={2}
+                onInput={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").slice(0, 2);
+
+                  if (
+                    val.length === 2 &&
+                    (Number(val) < 0 || Number(val) > 59)
+                  ) {
+                    val = val.slice(0, 1);
+                  }
+                  e.target.value = val;
+                }}
+                onBlur={handleMinutesBlur}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+
+                    handleMinutesBlur(e);
+                    e.target.blur();
+                  }
+                }}
+                value={form.minutes}
+                onChange={handleChange}
+              />
+
+              <div
+                className={`half-of-day-indecator input-year-pseudo-input-meridiem pseudo-input
+							${
+                (secondTimePlus && (errorFormHours || errorFormMinutes)) ||
+                (secondTimePlus &&
+                  errorFormTime &&
+                  !errorFormDate &&
+                  !(errorFormMonth || errorFormDay || errorFormYear))
+                  ? "placeholder-error border-input-error wrong-input-txt-color"
+                  : "placeholder-normal"
+              }
+							
+							`}
+              >
+                {halfOfDay}
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset className="fildset-people">
+            <button
+              className="button-decrement"
+              onClick={(e) => {
+                e.preventDefault();
+                if (people > 1) setPeople((p) => p - 1);
+              }}
+            >
+              -
+            </button>
+            <div className="people">{people} people</div>
+            <button
+              className="button-increment"
+              onClick={(e) => {
+                e.preventDefault();
+                if (people < 20) setPeople((p) => p + 1);
+              }}
+            >
+              +
+            </button>
+          </fieldset>
+
+          <fieldset className="fildset-button">
+            <button
+              id="submitButton"
+              className={`submit-button ${
+                !secondTimePlus && "submit-button-active"
+              } ${
+                secondTimePlus &&
+                !errorFormEmail &&
+                !errorFormName &&
+                timeFildsetInfo === "Picked time" &&
+                dataFildsetInfo === "Picked date" &&
+                "submit-button-active"
+              }`}
+              type="submit"
+            >
+              MAKE RESERVATION
+            </button>
+          </fieldset>
+        </form>
+      ) : (
+        <div className="order-complite-massage">
+          <div className="order-complite-massage-info">
+							<h2 className="order-complite-massage-info-h2">{`Dear, ${form.name}!`}</h2>
+            <p className="order-complite-massage-info-p"></p>Your reservation
+            was placed. Please check your email for confirmation.
+						</div>
         </div>
-      </fieldset>
-
-      <fildset className="fildset-people">
-        <button
-          className="button-decrement"
-          onClick={(e) => {
-            e.preventDefault();
-            if (people > 1) setPeople((p) => p - 1);
-          }}
-        >
-          -
-        </button>
-        <div className="people">{people} people</div>
-        <button
-          className="button-increment"
-          onClick={(e) => {
-            e.preventDefault();
-            if (people < 20) setPeople((p) => p + 1);
-          }}
-        >
-          +
-        </button>
-      </fildset>
-
-      <fieldset className="fildset-button">
-        <button
-          id="submitButton"
-          className={`submit-button ${
-            !secondTimePlus && "submit-button-active"
-          } ${
-            secondTimePlus &&
-            !errorFormEmail &&
-            !errorFormName &&
-            timeFildsetInfo === "Picked time" &&
-            dataFildsetInfo === "Picked date" &&
-            "submit-button-active"
-          }`}
-          type="submit"
-        >
-          MAKE RESERVATION
-        </button>
-      </fieldset>
-    </form>
+      )}
+    </>
   );
 }
