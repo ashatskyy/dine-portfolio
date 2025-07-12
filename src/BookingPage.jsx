@@ -1,32 +1,49 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import { Form } from "./Form";
 import { Footer } from "./Footer";
 
 export const BookingPage = () => {
+  const [trigerDecorativeBookingSection, setTrigerDecorativeBookingSection] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    document.title = "Booking - dine.";
+  }, []);
+
+  useEffect(() => {
+    const scrollTarget = location.state?.scrollTo;
+    if (scrollTarget) {
+      window.scrollTo({ top: scrollTarget });
+    }
+  }, [location.state]);
+
   return (
     <>
-
-
-      <BookingPageHeader />
-      <DecorativeBookingSection />
+      <BookingPageHeader
+        trigerDecorativeBookingSection={trigerDecorativeBookingSection}
+        setTrigerDecorativeBookingSection={setTrigerDecorativeBookingSection}
+      />
+      <DecorativeBookingSection trigerDecorativeBookingSection={trigerDecorativeBookingSection} />
       <Footer />
     </>
   );
 };
 
-const BookingPageHeader = () => {
+const BookingPageHeader = ({ trigerDecorativeBookingSection, setTrigerDecorativeBookingSection }) => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-	const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-	};
-	
   return (
-		<header className="booking-header-container">
-			<Form />
+    <header className="booking-header-container">
+      <Form setTrigerDecorativeBookingSection={setTrigerDecorativeBookingSection} />
       <Link to="/" className="logo-link" onClick={scrollToTop}>
-				<img className="logo" src="./images/dine.svg" alt="logo" />
-				  </Link>
+        <img className="logo" src="./images/dine.svg" alt="logo" />
+      </Link>
+      {trigerDecorativeBookingSection && (
         <div className="booking-header-text-block">
           <h1 className="header-main-info-about-restaurant-home-pg-h1 booking-header-h1">Reservations</h1>
           <p className="header-main-appeal-p booking-header-p">
@@ -35,19 +52,21 @@ const BookingPageHeader = () => {
             to accommodate you.
           </p>
         </div>
-   
+      )}
     </header>
   );
 };
 
-const DecorativeBookingSection = () => {
+const DecorativeBookingSection = ({ trigerDecorativeBookingSection }) => {
   return (
-    <section className="decorative-booking-section-container">
-      <img
-        className="pattern-lines pattern-lines-static-booking-pg"
-        src="./images/pattern-lines.svg"
-        alt="pattern lines"
-      />
-    </section>
+    trigerDecorativeBookingSection && (
+      <section className="decorative-booking-section-container">
+        <img
+          className="pattern-lines pattern-lines-static-booking-pg"
+          src="./images/pattern-lines.svg"
+          alt="pattern lines"
+        />
+      </section>
+    )
   );
 };

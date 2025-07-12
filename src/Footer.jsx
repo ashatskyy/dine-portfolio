@@ -8,6 +8,7 @@ export const Footer = () => {
     <section className="footer">
       <div className="footer-main-container">
         <Link to="/" className="logo-link" onClick={scrollToTop}>
+				{/* <Link to="/" className="logo-link" state={{ top: 0, behavior: "smooth" }}> */}
           <img className="logo" src="./images/dine.svg" alt="logo" />
 				</Link>
 				

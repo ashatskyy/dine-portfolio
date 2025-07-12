@@ -2,7 +2,7 @@ import isEmail from "validator/lib/isEmail";
 
 import { useEffect, useState, useCallback } from "react";
 
-export function Form() {
+export function Form({ setTrigerDecorativeBookingSection }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -233,9 +233,10 @@ export function Form() {
       !errorFormName &&
       !errorFormEmail
     ) {
-			setMainCondition(false);
-			// window.scrollTo(0, 0);
-			  window.scrollTo({ top: 0, behavior: "smooth" });
+      setMainCondition(false);
+      // window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTrigerDecorativeBookingSection(false);
     }
   };
 
@@ -467,7 +468,8 @@ export function Form() {
                     ? "placeholder-error border-input-error"
                     : "placeholder-normal"
                 }`}
-                type="text"
+								type="text"
+								maxlength="21"
                 placeholder="Name"
                 name="name"
                 value={form.name}
@@ -844,10 +846,12 @@ export function Form() {
       ) : (
         <div className="order-complite-massage">
           <div className="order-complite-massage-info">
-							<h2 className="order-complite-massage-info-h2">{`Dear, ${form.name}!`}</h2>
-            <p className="order-complite-massage-info-p"></p>Your reservation
-            was placed. Please check your email for confirmation.
-						</div>
+            <h1 className="booking-complite-txt-block-h1">{`Dear ${form.name}`}</h1>
+            <p className="booking-complite-txt-block-p">
+              Your reservation was placed.<br/> Please check your email for
+              confirmation. <br/>You can modify or cancel your reservation<br/> using the link inside.
+            </p>
+          </div>
         </div>
       )}
     </>

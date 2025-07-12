@@ -1,35 +1,35 @@
-.form, .order-complite-massage {
+.form {
 	position: absolute;
 
-	// top:258px;
-	// left:735px;
+	
 
 	top: clamp(0px, 17.92vw, 258px);
 left: clamp(0px, 51.04vw, 735px);
 
 
-
-  // width: 540px;
-  // height: 545px;
-
   width: clamp(0px, 37.5vw, 540px);
   height: clamp(0px, 37.85vw, 545px);
 
   background-color: #fff;
-  // padding: 45px 48px 53px 48px;
+ 
 
   padding-top: clamp(0px, 3.13vw, 45px);
   padding-right: clamp(0px, 3.33vw, 48px);
   padding-bottom: clamp(0px, 3.68vw, 53px);
   padding-left: clamp(0px, 3.33vw, 48px);
 
-	 box-shadow: 0px // clamp(5px, 0.69vw, 10px)
+	 box-shadow: 0px 
     clamp(28px, 3.82vw, 55px) clamp(40px, 5.55vw, 80px)
     clamp(-15px, -2.08vw, -30px) rgba(0, 0, 0, 0.4);
 }
 
+
+
+
+
+
 @media (max-width: 1024px) {
-  .form, .order-complite-massage {
+  .form {
 
 top: 370px;
 left: calc(243px - (1024px - 100vw) * 0.5);
@@ -42,10 +42,12 @@ left: calc(243px - (1024px - 100vw) * 0.5);
     padding-bottom: 53px;
     padding-left: 48px;
   }
+
+
 }
 
 @media (max-width: 768px) {
-  .form, .order-complite-massage {
+  .form {
 top: clamp(0px, 48.18vw, 370px);
 left: clamp(0px, 14.84vw, 114px);
 
@@ -58,10 +60,12 @@ left: clamp(0px, 14.84vw, 114px);
     padding-bottom: clamp(0px, 6.9vw, 53px);
     padding-left: clamp(0px, 6.25vw, 48px);
   }
+
+
 }
 
 @media (max-width: 480px) {
-  .form, .order-complite-massage {
+  .form {
 top: 325px;
 left: calc(76.5px - (480px - 100vw) * 0.5);
 
@@ -70,10 +74,12 @@ left: calc(76.5px - (480px - 100vw) * 0.5);
 
     padding: 34px 32px 32px 32px;
   }
+
+
 }
 
 @media (max-width: 375px) {
-  .form, .order-complite-massage {
+  .form {
   
 top: clamp(0px, 86.67vw, 325px);
 left: clamp(0px, 6.4vw, 24px);
@@ -87,6 +93,7 @@ left: clamp(0px, 6.4vw, 24px);
   padding-bottom: clamp(0px, 8.53vw, 32px);
   padding-left: clamp(0px, 8.53vw, 32px);
   }
+
 }
 
 .form-long-height {
@@ -129,8 +136,7 @@ height: clamp(0px, 157.87vw, 592px);
   display: flex;
   flex-direction: column;
 
-  // gap: 10px;
-  // margin-bottom: 16px;
+ 
 
   gap: clamp(0px, 0.69vw, 10px);
   margin-bottom: clamp(0px, 1.11vw, 16px);
@@ -911,54 +917,175 @@ letter-spacing: clamp(0px, 0.67vw, 2.5px);
   display: inline-block;
 }
 
-.order-complite-massage-info{
-	color: #9E7F66;
 
-	// font-size: 20px;
-	font-size: clamp(0px,1.38vw,20px);
-	// border: 1px solid #9E7F66;
+
+.order-complite-massage-info{
+
+	color: #fff;
+
 	width: 100%;
 	height: 100%;
 
-	// line-height: 28px
-	line-height: clamp(0px,1.8vw,26px);
+text-align: center;
+
 }
 
+
+.order-complite-massage{
+	position: absolute;
+	width: clamp(0px,76.38vw,1100px);
+
+// top: clamp(0px, 13.75vw, 198px);
+
+top: clamp(0px, 16.80vw, 242px);
+// top: 248px;
+
+
+	background: transparent;
+// border: 1px solid wheat;
+}
 
 @media (max-width: 1024px) {
-	.order-complite-massage-info{
-		font-size: 20px;
+	.order-complite-massage{
 
-line-height: 26px;
+		width:680px;
+top: 278px;
+left: calc(170px - (1024px - 100vw) * 0.5);
 	}
 }
+
 @media (max-width: 768px) {
-	.order-complite-massage-info{
-		font-size: clamp(0px,2.6vw,20px);
-		line-height:clamp(0px,3.38vw,26px);
+	.order-complite-massage{
+
+width: clamp(0px, 88.54vw, 680px);
+top: clamp(0px, 36.19vw,278px);
+left: clamp(0px, 5.47vw, 42px);
+
+	}
+}
+
+@media (max-width: 480px) {
+	.order-complite-massage{
+
+width: 350px;
+top: 318px;
+// left: 65px;
+
+left: calc(65px - (480px - 100vw) * 0.5);
+	}
+}
+
+@media (max-width: 375px) {
+	.order-complite-massage{
+
+  width:  clamp(0px, 93.33vw, 350px);
+  top:    clamp(0px, 84.8vw, 318px);
+  left:   clamp(0px,  3.33vw,  12.5px);
+
+
+
+	}
+}
+
+// @media (max-width: 480px) {
+// 	.order-complite-massage{
+
+// width: 400px;
+// top: 178px;
+// left: calc(42px - (480px - 100vw) * 0.5);
+// 	}
+// }
+
+.booking-complite-txt-block-h1{
+font-weight: 200;
+font-size: clamp(0px, 5.56vw, 80px);
+line-height: clamp(0px, 5.56vw, 80px);
+
+	letter-spacing: -1px;
+	margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+	.booking-complite-txt-block-h1{
+		font-size: 48px;
+line-height: 64px;
+
+	
+	}
+}
+
+@media (max-width: 768px) {
+	.booking-complite-txt-block-h1{
+font-size: clamp(0px, 6.25vw, 48px);
+line-height: clamp(0px, 8.33vw, 64px);
+
+	
 	}
 }
 @media (max-width: 480px) {
-	.order-complite-massage-info{
-		font-size: 16px;
-		// line-height: 19px;
-		line-height: 22px;
+	.booking-complite-txt-block-h1{
+font-size: 32px;
+line-height: 40px;
+
+	
 	}
 }
+
 @media (max-width: 375px) {
-	.order-complite-massage-info{
-		font-size: clamp(0px,4.26vw,16px);
-		line-height: clamp(0px,5.85vw,22px);
-		// line-height: 19px;
-		// line-height: 19px;
+	.booking-complite-txt-block-h1{
+font-size: clamp(0px, 8.53vw, 32px);
+line-height: clamp(0px, 10.67vw, 40px);
+
+
+	
 	}
 }
 
 
-// .order-complite-massage-info-h2{
-// // font-size: 24px;
-// }
 
-// .order-complite-massage-info-p{
-// 	line-height: 124px;
-// }
+.booking-complite-txt-block-p{
+margin-top: clamp(0px, 0.69vw, 10px);
+font-weight: 400;
+font-size: clamp(0px, 1.39vw, 20px);
+line-height: clamp(0px, 2.08vw, 30px);
+
+	
+}
+@media (max-width: 1024px) {
+	.booking-complite-txt-block-p{
+margin-top: 10px;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.booking-complite-txt-block-p{
+margin-top: clamp(0px, 1.3vw, 10px);
+font-weight: 400;
+font-size: clamp(0px, 2.6vw, 20px);
+line-height: clamp(0px, 3.91vw, 30px);
+
+
+	}}
+
+@media (max-width: 480px) {
+	.booking-complite-txt-block-p{
+margin-top: 10px;
+
+font-size: 16px;
+line-height: 26px;
+
+
+	}}
+
+@media (max-width: 375px) {
+	.booking-complite-txt-block-p{
+margin-top: clamp(0px, 2.67vw, 10px);
+font-size: clamp(0px, 4.27vw, 16px);
+line-height: clamp(0px, 6.93vw, 26px);
+
+
+
+
+	}}

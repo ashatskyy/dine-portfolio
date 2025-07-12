@@ -1,12 +1,10 @@
-import { HashRouter, Routes, Route} from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 import { Header } from "./Header";
 import { Main } from "./Main";
-
 import { BookingPage } from "./BookingPage";
 import { Footer } from "./Footer";
-
-// import { LinkToBooking } from "./LinkToBooking";
 
 export function App() {
   return (
@@ -20,23 +18,14 @@ export function App() {
 }
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "dine – Fine Dining in Cumbria. Portfolio by Shatskyi Oleksandr";
+  }, []);
+
   return (
     <>
-      {/* <Header LinkToBooking={LinkToBooking} /> */}
       <Header />
-
       <Main />
-     
-      {/* <nav>
-        <Link to="/">Family Gathering</Link> |
-        <Link to="/special-events">Special Events</Link> |
-        <Link to="/social-events">Social Events</Link>
-			</nav>
-			
-      <p>PIC</p>
-      <p>are you not booking alredy? :</p>
-      <LinkToBooking /> */}
-
       <Footer />
     </>
   );
