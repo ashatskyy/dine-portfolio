@@ -61,11 +61,11 @@ const DecorativeBookingSection = ({ trigerDecorativeBookingSection }) => {
   return (
     trigerDecorativeBookingSection && (
       <section className="decorative-booking-section-container">
-        <img
-          className="pattern-lines pattern-lines-static-booking-pg"
-          src="./images/pattern-lines.svg"
-          alt="pattern lines"
-        />
+      <img
+  className="pattern-lines pattern-lines-static-booking-pg"
+  src="./images/pattern-lines.svg"
+  alt=""
+/>
       </section>
     )
   );

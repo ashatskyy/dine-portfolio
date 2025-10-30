@@ -12,10 +12,10 @@ export const AboutInfoSection = () => {
 			<div className="about-info-section-txt-block">
 			
         <img
-          src="./images/pattern-divide.svg"
-          alt="visual divider"
-          className="visual-divider"
-        />
+  src="./images/pattern-divide.svg"
+  alt=""
+  className="visual-divider"
+/>
         <h2 className="about-info-section-txt-block-h2">
           Enjoyable place for all the family
         </h2>
@@ -28,7 +28,7 @@ export const AboutInfoSection = () => {
       <div className="about-info-section-txt-block about-info-section-txt-block-lower">
        <img
             src="./images/pattern-divide.svg"
-            alt="visual divider"
+            alt=""
             className="visual-divider"
           />
           <h2 className="about-info-section-txt-block-h2">

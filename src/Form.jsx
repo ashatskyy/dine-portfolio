@@ -445,7 +445,7 @@ export function Form({ setTrigerDecorativeBookingSection }) {
           }}
           noValidate
         >
-          {/* <fieldset className="fildset-name-email"> */}
+          
           <fieldset
             className={`fildset-name-email ${
               secondTimePlus && errorFormEmail
@@ -455,11 +455,14 @@ export function Form({ setTrigerDecorativeBookingSection }) {
           >
             <legend className="visually-hidden">Contact Information</legend>
 
-            <label htmlFor="name" className="visually-hidden">
+            {/* <label htmlFor="name" className="visually-hidden">
+              Name
+            </label> */}
+
+						<div className="input-set">
+							   <label htmlFor="name" className="visually-hidden">
               Name
             </label>
-
-            <div className="input-set">
               <input
                 autoComplete="off"
                 id="name"
@@ -487,10 +490,13 @@ export function Form({ setTrigerDecorativeBookingSection }) {
                 )}
               </div>
             </div>
-            <label htmlFor="email" className="visually-hidden">
+            {/* <label htmlFor="email" className="visually-hidden">
+              Email
+            </label> */}
+						<div className="input-set">  
+							  <label htmlFor="email" className="visually-hidden">
               Email
             </label>
-            <div className="input-set">
               <input
                 autoComplete="off"
                 id="email"

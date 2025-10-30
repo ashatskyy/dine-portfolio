@@ -19,7 +19,7 @@ export function App() {
 
 const Home = () => {
   useEffect(() => {
-    document.title = "dine – Fine Dining in Cumbria. Portfolio by Shatskyi Oleksandr";
+    document.title = "dine – Fine Dining in Cumbria. Portfolio by Oleksandr S";
   }, []);
 
   return (

@@ -133,13 +133,13 @@ height: clamp(0px, 157.87vw, 592px);
   padding: 0;
   margin: 0;
   width: 100%;
+
   display: flex;
   flex-direction: column;
-
- 
-
   gap: clamp(0px, 0.69vw, 10px);
+
   margin-bottom: clamp(0px, 1.11vw, 16px);
+	// height: 147.7px;
 }
 
 @media (max-width: 1024px) {
@@ -382,6 +382,10 @@ padding-left: clamp(0px, 4.27vw, 16px);
   }
 }
 
+// .input-set{
+// 	height: 68.8px;
+// }
+
 .input {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
@@ -397,7 +401,7 @@ padding-left: clamp(0px, 4.27vw, 16px);
 
   font-size: clamp(0px, 1.39vw, 20px);
   line-height: clamp(0px, 1.94vw, 28px);
-
+// line-height: normal;
   padding-top: clamp(0px, 0.14vw, 2px);
   padding-right: 0;
   padding-bottom: clamp(0px, 0.97vw, 14px);
@@ -406,6 +410,9 @@ padding-left: clamp(0px, 4.27vw, 16px);
   caret-color: #9e7f66;
 
   cursor: pointer;
+
+	  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -855,6 +862,10 @@ line-height: clamp(0px, 6.4vw, 24px);
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: default;
+
+	 display: flex;
+  align-items: center;
+	justify-content: center;
 }
 
 @media (max-width: 1024px) {

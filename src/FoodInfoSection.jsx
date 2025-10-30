@@ -1,13 +1,11 @@
 export const FoodInfoSection = () => {
   return (
-		<section className="menu-highlights-section">
-			
-			<div className="menu-highlights-container">
-				
+    <section className="menu-highlights-section">
+      <div className="menu-highlights-container">
         <div className="menu-highlights-main-info">
           <img
             src="./images/pattern-divide.svg"
-            alt="visual divider"
+            alt=""
             className="visual-divider"
           />
 
@@ -21,28 +19,26 @@ export const FoodInfoSection = () => {
           </p>
         </div>
 
-				<div className="menu-highlighted-dishes-list">
-					
-
+        <div className="menu-highlighted-dishes-list">
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
               <picture>
                 <source
                   media="(max-width: 480px)"
                   srcSet="
-                          ./images/salmon-mobile.jpg 1x,
-                          ./images/salmon-mobile@2x.jpg 2x"
+                    ./images/salmon-mobile.jpg 1x,
+                    ./images/salmon-mobile@2x.jpg 2x"
                 />
                 <source
                   media="(min-width: 481px)"
                   srcSet="
-                          ./images/salmon-desktop-tablet.jpg 1x,
-                          ./images/salmon-desktop-tablet@2x.jpg 2x"
+                    ./images/salmon-desktop-tablet.jpg 1x,
+                    ./images/salmon-desktop-tablet@2x.jpg 2x"
                 />
                 <img
                   className="hightlighted-dish-picture"
                   src="./images/salmon-desktop-tablet.jpg"
-                  alt="Delicious beef served on a plate"
+                  alt="Seared salmon fillet with buckwheat summer salad"
                 />
               </picture>
 
@@ -50,43 +46,42 @@ export const FoodInfoSection = () => {
             </div>
 
             <div className="highlighted-dish-decription">
-
               <h3 className="highlighted-dish-description-h3">
                 Seared Salmon Fillet
               </h3>
 
               <p className="highlighted-dish-description-p highlighted-dish-description-p-mobile-width">
-                Our locally sourced salmon served<br className="desctop-mobile-br"/> with a refreshing buckwheat
+                Our locally sourced salmon served<br className="desctop-mobile-br" /> with a refreshing buckwheat
                 summer salad.
               </p>
             </div>
-					</div>
-					
-					<hr className="decorative-horizontal-line-long" />
-					
+          </div>
+
+          <hr className="decorative-horizontal-line-long" />
+
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
               <picture>
                 <source
                   media="(max-width: 480px)"
                   srcSet="
-                          ./images/beef-mobile.jpg 1x,
-                          ./images/beef-mobile@2x.jpg 2x"
+                    ./images/beef-mobile.jpg 1x,
+                    ./images/beef-mobile@2x.jpg 2x"
                 />
                 <source
                   media="(min-width: 481px)"
                   srcSet="
-                          ./images/beef-desktop-tablet.jpg 1x,
-                          ./images/beef-desktop-tablet@2x.jpg 2x"
+                    ./images/beef-desktop-tablet.jpg 1x,
+                    ./images/beef-desktop-tablet@2x.jpg 2x"
                 />
                 <img
                   className="hightlighted-dish-picture"
                   src="./images/beef-desktop-tablet.jpg"
-                  alt="Delicious beef served on a plate"
+                  alt="Rosemary filet mignon with seasonal sides"
                 />
               </picture>
 
-              <hr className="decorative-horizontal-line " />
+              <hr className="decorative-horizontal-line" />
             </div>
 
             <div className="highlighted-dish-decription">
@@ -100,8 +95,8 @@ export const FoodInfoSection = () => {
               </p>
             </div>
           </div>
-          <hr className="decorative-horizontal-line-long" />
 
+          <hr className="decorative-horizontal-line-long" />
 
           <div className="highlighted-dish">
             <div className="hightlighted-dish-pic-container">
@@ -109,19 +104,19 @@ export const FoodInfoSection = () => {
                 <source
                   media="(max-width: 480px)"
                   srcSet="
-                          ./images/chocolate-mobile.jpg 1x,
-                          ./images/chocolate-mobile@2x.jpg 2x"
+                    ./images/chocolate-mobile.jpg 1x,
+                    ./images/chocolate-mobile@2x.jpg 2x"
                 />
                 <source
                   media="(min-width: 481px)"
                   srcSet="
-                          ./images/chocolate-desktop-tablet.jpg 1x,
-                          ./images/chocolate-desktop-tablet@2x.jpg 2x"
+                    ./images/chocolate-desktop-tablet.jpg 1x,
+                    ./images/chocolate-desktop-tablet@2x.jpg 2x"
                 />
                 <img
                   className="hightlighted-dish-picture"
                   src="./images/chocolate-desktop-tablet.jpg"
-                  alt="Delicious beef served on a plate"
+                  alt="Summer fruit chocolate mousse dessert"
                 />
               </picture>
 
@@ -134,13 +129,11 @@ export const FoodInfoSection = () => {
               </h3>
 
               <p className="highlighted-dish-description-p highlighted-dish-description-p-mobile-width">
-                Creamy mousse combined with<br className="mobile-br"/> summer fruits and dark chocolate
+                Creamy mousse combined with<br className="mobile-br" /> summer fruits and dark chocolate
                 shavings.
               </p>
             </div>
-					</div>
-					
-
+          </div>
         </div>
       </div>
     </section>
