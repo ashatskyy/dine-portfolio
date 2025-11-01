@@ -333,6 +333,11 @@ letter-spacing: clamp(-100px, -0.069vw, -1px);
 
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: default;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// text-decoration: none;
 }
 
 .book-a-table-button-opaque-background{
