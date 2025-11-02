@@ -445,7 +445,6 @@ export function Form({ setTrigerDecorativeBookingSection }) {
           }}
           noValidate
         >
-          
           <fieldset
             className={`fildset-name-email ${
               secondTimePlus && errorFormEmail
@@ -459,10 +458,10 @@ export function Form({ setTrigerDecorativeBookingSection }) {
               Name
             </label> */}
 
-						<div className="input-set">
-							   <label htmlFor="name" className="visually-hidden">
-              Name
-            </label>
+            <div className="input-set">
+              <label htmlFor="name" className="visually-hidden">
+                Name
+              </label>
               <input
                 autoComplete="off"
                 id="name"
@@ -471,8 +470,8 @@ export function Form({ setTrigerDecorativeBookingSection }) {
                     ? "placeholder-error border-input-error"
                     : "placeholder-normal"
                 }`}
-								type="text"
-								maxlength="21"
+                type="text"
+                maxlength="21"
                 placeholder="Name"
                 name="name"
                 value={form.name}
@@ -493,10 +492,10 @@ export function Form({ setTrigerDecorativeBookingSection }) {
             {/* <label htmlFor="email" className="visually-hidden">
               Email
             </label> */}
-						<div className="input-set">  
-							  <label htmlFor="email" className="visually-hidden">
-              Email
-            </label>
+            <div className="input-set">
+              <label htmlFor="email" className="visually-hidden">
+                Email
+              </label>
               <input
                 autoComplete="off"
                 id="email"
@@ -830,23 +829,27 @@ export function Form({ setTrigerDecorativeBookingSection }) {
             </button>
           </fieldset>
 
-          <fieldset className="fildset-button">
+					<fieldset className="fildset-button">
+						
+						
             <button
               id="submitButton"
               className={`submit-button ${
-                !secondTimePlus && "submit-button-active"
+                !secondTimePlus && "submit-button-pressable"
               } ${
                 secondTimePlus &&
                 !errorFormEmail &&
                 !errorFormName &&
                 timeFildsetInfo === "Picked time" &&
                 dataFildsetInfo === "Picked date" &&
-                "submit-button-active"
+                "submit-button-pressable"
               }`}
               type="submit"
             >
               MAKE RESERVATION
-            </button>
+						</button>
+						
+
           </fieldset>
         </form>
       ) : (
@@ -854,8 +857,10 @@ export function Form({ setTrigerDecorativeBookingSection }) {
           <div className="order-complite-massage-info">
             <h1 className="booking-complite-txt-block-h1">{`Dear ${form.name}`}</h1>
             <p className="booking-complite-txt-block-p">
-              Your reservation was placed.<br/> Please check your email for
-              confirmation. <br/>You can modify or cancel your reservation<br/> using the link inside.
+              Your reservation was placed.
+              <br /> Please check your email for confirmation. <br />
+              You can modify or cancel your reservation
+              <br /> using the link inside.
             </p>
           </div>
         </div>

@@ -1,38 +1,27 @@
 .form {
-	position: absolute;
+  position: absolute;
 
-	
-
-	top: clamp(0px, 17.92vw, 258px);
-left: clamp(0px, 51.04vw, 735px);
-
+  top: clamp(0px, 17.92vw, 258px);
+  left: clamp(0px, 51.04vw, 735px);
 
   width: clamp(0px, 37.5vw, 540px);
   height: clamp(0px, 37.85vw, 545px);
 
   background-color: #fff;
- 
 
   padding-top: clamp(0px, 3.13vw, 45px);
   padding-right: clamp(0px, 3.33vw, 48px);
   padding-bottom: clamp(0px, 3.68vw, 53px);
   padding-left: clamp(0px, 3.33vw, 48px);
 
-	 box-shadow: 0px 
-    clamp(28px, 3.82vw, 55px) clamp(40px, 5.55vw, 80px)
+  box-shadow: 0px clamp(28px, 3.82vw, 55px) clamp(40px, 5.55vw, 80px)
     clamp(-15px, -2.08vw, -30px) rgba(0, 0, 0, 0.4);
 }
 
-
-
-
-
-
 @media (max-width: 1024px) {
   .form {
-
-top: 370px;
-left: calc(243px - (1024px - 100vw) * 0.5);
+    top: 370px;
+    left: calc(243px - (1024px - 100vw) * 0.5);
 
     width: 540px;
     height: 545px;
@@ -42,15 +31,12 @@ left: calc(243px - (1024px - 100vw) * 0.5);
     padding-bottom: 53px;
     padding-left: 48px;
   }
-
-
 }
 
 @media (max-width: 768px) {
   .form {
-top: clamp(0px, 48.18vw, 370px);
-left: clamp(0px, 14.84vw, 114px);
-
+    top: clamp(0px, 48.18vw, 370px);
+    left: clamp(0px, 14.84vw, 114px);
 
     width: clamp(0px, 70.31vw, 540px);
     height: clamp(0px, 70.96vw, 545px);
@@ -60,40 +46,33 @@ left: clamp(0px, 14.84vw, 114px);
     padding-bottom: clamp(0px, 6.9vw, 53px);
     padding-left: clamp(0px, 6.25vw, 48px);
   }
-
-
 }
 
 @media (max-width: 480px) {
   .form {
-top: 325px;
-left: calc(76.5px - (480px - 100vw) * 0.5);
+    top: 325px;
+    left: calc(76.5px - (480px - 100vw) * 0.5);
 
     width: 327px;
     height: 585px;
 
     padding: 34px 32px 32px 32px;
   }
-
-
 }
 
 @media (max-width: 375px) {
   .form {
-  
-top: clamp(0px, 86.67vw, 325px);
-left: clamp(0px, 6.4vw, 24px);
+    top: clamp(0px, 86.67vw, 325px);
+    left: clamp(0px, 6.4vw, 24px);
 
-  width: clamp(0px, 87.2vw, 327px);
-  height: clamp(0px, 156vw, 585px);
+    width: clamp(0px, 87.2vw, 327px);
+    height: clamp(0px, 156vw, 585px);
 
- 
-  padding-top: clamp(0px, 9.07vw, 34px);
-  padding-right: clamp(0px, 8.53vw, 32px);
-  padding-bottom: clamp(0px, 8.53vw, 32px);
-  padding-left: clamp(0px, 8.53vw, 32px);
+    padding-top: clamp(0px, 9.07vw, 34px);
+    padding-right: clamp(0px, 8.53vw, 32px);
+    padding-bottom: clamp(0px, 8.53vw, 32px);
+    padding-left: clamp(0px, 8.53vw, 32px);
   }
-
 }
 
 .form-long-height {
@@ -114,19 +93,15 @@ left: clamp(0px, 6.4vw, 24px);
 
 @media (max-width: 480px) {
   .form-long-height {
-    
     height: 592px;
   }
 }
 
 @media (max-width: 375px) {
   .form-long-height {
-    
-height: clamp(0px, 157.87vw, 592px);
-
+    height: clamp(0px, 157.87vw, 592px);
   }
 }
-
 
 .fildset-name-email {
   border: 0;
@@ -139,7 +114,7 @@ height: clamp(0px, 157.87vw, 592px);
   gap: clamp(0px, 0.69vw, 10px);
 
   margin-bottom: clamp(0px, 1.11vw, 16px);
-	// height: 147.7px;
+  // height: 147.7px;
 }
 
 @media (max-width: 1024px) {
@@ -165,8 +140,8 @@ height: clamp(0px, 157.87vw, 592px);
 
 @media (max-width: 375px) {
   .fildset-name-email {
-   gap: clamp(0px, 1.33vw, 5px);
-margin-bottom: clamp(0px, 4.27vw, 16px);
+    gap: clamp(0px, 1.33vw, 5px);
+    margin-bottom: clamp(0px, 4.27vw, 16px);
   }
 }
 
@@ -188,19 +163,15 @@ margin-bottom: clamp(0px, 4.27vw, 16px);
 
 @media (max-width: 480px) {
   .fildset-name-email-long-margin-bottom {
-   
     margin-bottom: 23px;
-   
   }
 }
 
 @media (max-width: 375px) {
   .fildset-name-email-long-margin-bottom {
-     margin-bottom: clamp(0px, 6.13vw, 23px);
+    margin-bottom: clamp(0px, 6.13vw, 23px);
   }
 }
-
-
 
 .fildset-date,
 .fildset-time {
@@ -253,16 +224,13 @@ margin-bottom: clamp(0px, 4.27vw, 16px);
   }
 }
 
-
 @media (max-width: 375px) {
   .data-time-fields-set {
-   gap: clamp(0px, 4.27vw, 16px);
-margin-top: clamp(0px, 2.67vw, 10px);
-
+    gap: clamp(0px, 4.27vw, 16px);
+    margin-top: clamp(0px, 2.67vw, 10px);
 
     flex-direction: row;
   }
-  
 }
 
 .input-day-month-hours-minutes {
@@ -278,7 +246,6 @@ margin-top: clamp(0px, 2.67vw, 10px);
   border-bottom: 1px solid #8e8e8e;
   outline: none;
   width: 100%;
-
 
   font-size: clamp(0px, 1.39vw, 20px);
   line-height: clamp(0px, 1.94vw, 28px);
@@ -328,14 +295,13 @@ margin-top: clamp(0px, 2.67vw, 10px);
 
 @media (max-width: 375px) {
   .input-year-pseudo-input-meridiem {
-   font-size: clamp(0px, 5.33vw, 20px);
-line-height: clamp(0px, 7.47vw, 28px);
+    font-size: clamp(0px, 5.33vw, 20px);
+    line-height: clamp(0px, 7.47vw, 28px);
 
-padding-top: clamp(0px, 0.53vw, 2px);
-padding-right: 0;
-padding-bottom: clamp(0px, 3.73vw, 14px);
-padding-left: clamp(0px, 4.27vw, 16px);
-
+    padding-top: clamp(0px, 0.53vw, 2px);
+    padding-right: 0;
+    padding-bottom: clamp(0px, 3.73vw, 14px);
+    padding-left: clamp(0px, 4.27vw, 16px);
   }
 }
 
@@ -376,9 +342,7 @@ padding-left: clamp(0px, 4.27vw, 16px);
 
 @media (max-width: 375px) {
   .action-of-the-field-info {
-  
-   font-size: clamp(0px, 5.33vw, 20px);
-
+    font-size: clamp(0px, 5.33vw, 20px);
   }
 }
 
@@ -401,7 +365,7 @@ padding-left: clamp(0px, 4.27vw, 16px);
 
   font-size: clamp(0px, 1.39vw, 20px);
   line-height: clamp(0px, 1.94vw, 28px);
-// line-height: normal;
+  // line-height: normal;
   padding-top: clamp(0px, 0.14vw, 2px);
   padding-right: 0;
   padding-bottom: clamp(0px, 0.97vw, 14px);
@@ -411,7 +375,7 @@ padding-left: clamp(0px, 4.27vw, 16px);
 
   cursor: pointer;
 
-	  display: flex;
+  display: flex;
   align-items: center;
 }
 
@@ -451,13 +415,12 @@ padding-left: clamp(0px, 4.27vw, 16px);
 @media (max-width: 375px) {
   .input {
     font-size: clamp(0px, 5.33vw, 20px);
-line-height: clamp(0px, 7.47vw, 28px);
+    line-height: clamp(0px, 7.47vw, 28px);
 
-padding-top: clamp(0px, 0.53vw, 2px);
-padding-right: 0;
-padding-bottom: clamp(0px, 3.73vw, 14px);
-padding-left: clamp(0px, 4.27vw, 16px);
-
+    padding-top: clamp(0px, 0.53vw, 2px);
+    padding-right: 0;
+    padding-bottom: clamp(0px, 3.73vw, 14px);
+    padding-left: clamp(0px, 4.27vw, 16px);
   }
 }
 
@@ -530,7 +493,6 @@ input:-webkit-autofill {
 @media (max-width: 375px) {
   .error_mesage_div {
     height: clamp(0px, 6.4vw, 24px);
-
   }
 }
 
@@ -582,9 +544,8 @@ input:-webkit-autofill {
 @media (max-width: 375px) {
   .errorText {
     font-size: clamp(10px, 3.2vw, 12px);
-padding-top: clamp(0px, 2.67vw, 10px);
-margin-left: clamp(0px, 4.27vw, 16px);
-
+    padding-top: clamp(0px, 2.67vw, 10px);
+    margin-left: clamp(0px, 4.27vw, 16px);
   }
 }
 
@@ -633,12 +594,9 @@ margin-left: clamp(0px, 4.27vw, 16px);
 
 @media (max-width: 375px) {
   .errorText-data {
-   
-
-		font-size: clamp(10px, 3.2vw, 12px);
-  top: clamp(0px, 19.47vw, 73px);
-padding-top: clamp(0px, 2.67vw, 10px);
-
+    font-size: clamp(10px, 3.2vw, 12px);
+    top: clamp(0px, 19.47vw, 73px);
+    padding-top: clamp(0px, 2.67vw, 10px);
   }
 }
 
@@ -718,8 +676,7 @@ padding-top: clamp(0px, 2.67vw, 10px);
 @media (max-width: 375px) {
   .fildset-people {
     margin-top: clamp(0px, 9.6vw, 36px);
-padding-bottom: clamp(0px, 4.53vw, 17px);
-
+    padding-bottom: clamp(0px, 4.53vw, 17px);
   }
 }
 
@@ -760,9 +717,8 @@ padding-bottom: clamp(0px, 4.53vw, 17px);
 
 @media (max-width: 375px) {
   .people {
-   font-size: clamp(0px, 5.33vw, 20px);
-line-height: clamp(0px, 6.4vw, 24px);
-
+    font-size: clamp(0px, 5.33vw, 20px);
+    line-height: clamp(0px, 6.4vw, 24px);
   }
 }
 
@@ -805,7 +761,6 @@ line-height: clamp(0px, 6.4vw, 24px);
   .button-increment,
   .button-decrement {
     font-size: clamp(0px, 4.8vw, 18px);
-
   }
 }
 
@@ -839,14 +794,22 @@ line-height: clamp(0px, 6.4vw, 24px);
 
 @media (max-width: 375px) {
   .fildset-button {
-   margin-top: clamp(0px, 8.53vw, 32px);
-
+    margin-top: clamp(0px, 8.53vw, 32px);
   }
 }
 
 .submit-button {
+
+	  all: unset;
+  // cursor: pointer;
+
   padding: 0;
+
   font-family: "League Spartan", sans-serif;
+  font-size: clamp(0px, 1.18vw, 17px);
+  font-weight: 600;
+  letter-spacing: clamp(0px, 0.17vw, 2.5px);
+
   color: #fff;
   background-color: black;
   width: 100%;
@@ -856,16 +819,15 @@ line-height: clamp(0px, 6.4vw, 24px);
   // letter-spacing: 2.5px;
 
   height: clamp(0px, 4.44vw, 64px);
-  font-size: clamp(0px, 1.18vw, 17px);
-  letter-spacing: clamp(0px, 0.17vw, 2.5px);
 
-  font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: default;
 
-	 display: flex;
+  display: flex;
   align-items: center;
-	justify-content: center;
+  justify-content: center;
+
+	box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
@@ -894,25 +856,26 @@ line-height: clamp(0px, 6.4vw, 24px);
 
 @media (max-width: 375px) {
   .submit-button {
-   height: clamp(0px, 17.07vw, 64px);
-font-size: clamp(0px, 4.53vw, 17px);
-letter-spacing: clamp(0px, 0.67vw, 2.5px);
-
+    height: clamp(0px, 17.07vw, 64px);
+    font-size: clamp(0px, 4.53vw, 17px);
+    letter-spacing: clamp(0px, 0.67vw, 2.5px);
   }
 }
 
-.submit-button-active:active {
+.submit-button-pressable:active {
   background-color: transparent;
   color: #111111;
+	
 }
 
 @media (min-width: 1024px) {
-  .submit-button-active {
+  .submit-button-pressable {
     cursor: pointer;
 
     &:hover {
       background-color: transparent;
       color: #111111;
+			border: 1px solid black;
     }
   }
 }
@@ -923,79 +886,64 @@ letter-spacing: clamp(0px, 0.67vw, 2.5px);
   }
 }
 
-
 .half-of-day-indecator {
   display: inline-block;
 }
 
+.order-complite-massage-info {
+  color: #fff;
 
+  width: 100%;
+  height: 100%;
 
-.order-complite-massage-info{
-
-	color: #fff;
-
-	width: 100%;
-	height: 100%;
-
-text-align: center;
-
+  text-align: center;
 }
 
+.order-complite-massage {
+  position: absolute;
+  width: clamp(0px, 76.38vw, 1100px);
 
-.order-complite-massage{
-	position: absolute;
-	width: clamp(0px,76.38vw,1100px);
+  // top: clamp(0px, 13.75vw, 198px);
 
-// top: clamp(0px, 13.75vw, 198px);
+  top: clamp(0px, 16.8vw, 242px);
+  // top: 248px;
 
-top: clamp(0px, 16.80vw, 242px);
-// top: 248px;
-
-
-	background: transparent;
-// border: 1px solid wheat;
+  background: transparent;
+  // border: 1px solid wheat;
 }
 
 @media (max-width: 1024px) {
-	.order-complite-massage{
-
-		width:680px;
-top: 278px;
-left: calc(170px - (1024px - 100vw) * 0.5);
-	}
+  .order-complite-massage {
+    width: 680px;
+    top: 278px;
+    left: calc(170px - (1024px - 100vw) * 0.5);
+  }
 }
 
 @media (max-width: 768px) {
-	.order-complite-massage{
-
-width: clamp(0px, 88.54vw, 680px);
-top: clamp(0px, 36.19vw,278px);
-left: clamp(0px, 5.47vw, 42px);
-
-	}
+  .order-complite-massage {
+    width: clamp(0px, 88.54vw, 680px);
+    top: clamp(0px, 36.19vw, 278px);
+    left: clamp(0px, 5.47vw, 42px);
+  }
 }
 
 @media (max-width: 480px) {
-	.order-complite-massage{
+  .order-complite-massage {
+    width: 350px;
+    top: 318px;
+    // left: 65px;
 
-width: 350px;
-top: 318px;
-// left: 65px;
-
-left: calc(65px - (480px - 100vw) * 0.5);
-	}
+    left: calc(65px - (480px - 100vw) * 0.5);
+  }
 }
 
 @media (max-width: 375px) {
-	.order-complite-massage{
-
-  width:  clamp(0px, 93.33vw, 350px);
-  top:    clamp(0px, 84.8vw, 318px);
-  left:   clamp(0px,  3.33vw,  12.5px);
-
-
-
-	}
+  .order-complite-massage {
+    width: clamp(0px, 93.33vw, 350px);
+    top: clamp(0px, 84.8vw, 318px);
+    left: clamp(0px, 3.33vw, 12.5px);
+  }
 }
 
 // @media (max-width: 480px) {
@@ -1007,96 +955,78 @@ left: calc(65px - (480px - 100vw) * 0.5);
 // 	}
 // }
 
-.booking-complite-txt-block-h1{
-font-weight: 200;
-font-size: clamp(0px, 5.56vw, 80px);
-line-height: clamp(0px, 5.56vw, 80px);
+.booking-complite-txt-block-h1 {
+  font-weight: 200;
+  font-size: clamp(0px, 5.56vw, 80px);
+  line-height: clamp(0px, 5.56vw, 80px);
 
-	letter-spacing: -1px;
-	margin-bottom: 0;
+  letter-spacing: -1px;
+  margin-bottom: 0;
 }
 @media (max-width: 1024px) {
-	.booking-complite-txt-block-h1{
-		font-size: 48px;
-line-height: 64px;
-
-	
-	}
+  .booking-complite-txt-block-h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
 }
 
 @media (max-width: 768px) {
-	.booking-complite-txt-block-h1{
-font-size: clamp(0px, 6.25vw, 48px);
-line-height: clamp(0px, 8.33vw, 64px);
-
-	
-	}
+  .booking-complite-txt-block-h1 {
+    font-size: clamp(0px, 6.25vw, 48px);
+    line-height: clamp(0px, 8.33vw, 64px);
+  }
 }
 @media (max-width: 480px) {
-	.booking-complite-txt-block-h1{
-font-size: 32px;
-line-height: 40px;
-
-	
-	}
+  .booking-complite-txt-block-h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: 375px) {
-	.booking-complite-txt-block-h1{
-font-size: clamp(0px, 8.53vw, 32px);
-line-height: clamp(0px, 10.67vw, 40px);
-
-
-	
-	}
+  .booking-complite-txt-block-h1 {
+    font-size: clamp(0px, 8.53vw, 32px);
+    line-height: clamp(0px, 10.67vw, 40px);
+  }
 }
 
-
-
-.booking-complite-txt-block-p{
-margin-top: clamp(0px, 0.69vw, 10px);
-font-weight: 400;
-font-size: clamp(0px, 1.39vw, 20px);
-line-height: clamp(0px, 2.08vw, 30px);
-
-	
+.booking-complite-txt-block-p {
+  margin-top: clamp(0px, 0.69vw, 10px);
+  font-weight: 400;
+  font-size: clamp(0px, 1.39vw, 20px);
+  line-height: clamp(0px, 2.08vw, 30px);
 }
 @media (max-width: 1024px) {
-	.booking-complite-txt-block-p{
-margin-top: 10px;
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
-	}
+  .booking-complite-txt-block-p {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 768px) {
-	.booking-complite-txt-block-p{
-margin-top: clamp(0px, 1.3vw, 10px);
-font-weight: 400;
-font-size: clamp(0px, 2.6vw, 20px);
-line-height: clamp(0px, 3.91vw, 30px);
-
-
-	}}
+  .booking-complite-txt-block-p {
+    margin-top: clamp(0px, 1.3vw, 10px);
+    font-weight: 400;
+    font-size: clamp(0px, 2.6vw, 20px);
+    line-height: clamp(0px, 3.91vw, 30px);
+  }
+}
 
 @media (max-width: 480px) {
-	.booking-complite-txt-block-p{
-margin-top: 10px;
+  .booking-complite-txt-block-p {
+    margin-top: 10px;
 
-font-size: 16px;
-line-height: 26px;
-
-
-	}}
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 
 @media (max-width: 375px) {
-	.booking-complite-txt-block-p{
-margin-top: clamp(0px, 2.67vw, 10px);
-font-size: clamp(0px, 4.27vw, 16px);
-line-height: clamp(0px, 6.93vw, 26px);
-
-
-
-
-	}}
+  .booking-complite-txt-block-p {
+    margin-top: clamp(0px, 2.67vw, 10px);
+    font-size: clamp(0px, 4.27vw, 16px);
+    line-height: clamp(0px, 6.93vw, 26px);
+  }
+}
