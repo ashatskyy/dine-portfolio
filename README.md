@@ -1,12 +1,18 @@
-# React + Vite
+# Restaurant website “dine”
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+A fully responsive website for a hypothetical English restaurant, featuring a clever registration form that streamlines the ordering process and improves user convenience. Built from a pixel-perfect Figma design.
 
-Currently, two official plugins are available:
+## Features
+Responsive Design: Works seamlessly on desktop, tablet, and mobile devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- HTML
+- SCSS
+- REACT
 
-## Expanding the ESLint configuration
+## Available at the following web address
+https://ashatskyy.github.io/dine-portfolio/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Autor
+Alexander Shatsky
