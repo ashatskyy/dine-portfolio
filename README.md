@@ -5,7 +5,9 @@ My portfolio website for a hypothetical English restaurant featuring a clever re
 
 ## Features
 - Responsive Design: Works seamlessly on desktop, tablet, and mobile devices.
-- Renders Correctly: across all modern browsers.
+- Renders Correctly: Across all modern browsers.
+- Fully Integrates: With all social media platforms, including banners with images.
+- Each Page: Accessible via its own unique URL.
 
 ## Technologies
 - HTML
