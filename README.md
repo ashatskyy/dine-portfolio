@@ -17,5 +17,5 @@ My portfolio website for a hypothetical English restaurant featuring a clever re
 ## Available at the following web address
 https://ashatskyy.github.io/dine-portfolio/
 
-## Autor
+## Author
 Alexander Shatsky
