@@ -1,4 +1,4 @@
-# Restaurant Website “dine”
+## Restaurant Website “dine”
 
 ## Description
 Pixel-perfect implementation based on a Figma design file for a hypothetical English restaurant with:
